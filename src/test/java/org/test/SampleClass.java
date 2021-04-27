@@ -19,18 +19,12 @@ public class SampleClass {
 		driver.get("https://www.facebook.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.get("https://www.facebook.com/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-
+    
 		WebElement txtUser = driver.findElement(By.id("email"));
 		txtUser.sendKeys("Ganeesh");
 		WebElement txtPass = driver.findElement(By.id("pass"));
 		txtPass.sendKeys("9876543210");
-
+    
 		driver.quit();
 	}
 
